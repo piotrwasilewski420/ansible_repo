@@ -13,6 +13,7 @@
         - curl
         - gnupg-agent
         - software-properties-common
+        - nmap
     - name: get docker gpg key
       apt_key:
         url: https://download.docker.com/linux/ubuntu/gpg

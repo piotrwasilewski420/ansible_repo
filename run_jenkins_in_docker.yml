@@ -1,0 +1,16 @@
+---
+- hosts: jenkinsm
+  become: true
+  tasks:
+    - name: run jenkins container
+      docker_container:
+        name: jenkins
+        image: jenkins/jenkins:lts
+        state: started
+        ports:
+          - "8080:8080"
+          - "50000:50000"
+        restart_policy: always
+        env:
+          JAVA_OPTS: "-Djenkins.install.runSetupWizard=false"
+        
