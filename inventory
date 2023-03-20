@@ -1,4 +1,7 @@
+[jenkins_servers]
 jenkinss
 jenkinsm
+
+[nexus]
 dev
 
